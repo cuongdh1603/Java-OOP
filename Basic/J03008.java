@@ -1,36 +1,27 @@
-/* SỐ LIỀN KỀ
+/* SỐ ĐẸP 3
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Basic;
-
-
-import static java.lang.Math.abs;
 import java.util.Scanner;
-
 /**
  *
  * @author Cuong
  */
-public class J01017 {
+public class J03008 {
     public static boolean check(String s){
-        for(int i=0;i<s.length()-1;i++){
-            if(abs(Integer.valueOf(s.charAt(i))-Integer.valueOf(s.charAt(i+1)))!=1)
+        int l = s.length();
+        for(int i=0;i<l/2;i++)
+            if(s.charAt(i)!=s.charAt(l-i-1)||s.contains("0")||s.contains("1")||s.contains("4")||s.contains("6")||s.contains("8")||s.contains("9"))
                 return false;
-        }
         return true;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-->0){
-            System.out.println(check(String.valueOf(sc.nextLong()))?"YES":"NO");       
+        int t = Integer.parseInt(sc.nextLine());
+        while (t-->0) {            
+            String s = sc.nextLine();
+            System.out.println(check(s)?"YES":"NO");
         }
     }
 }
-/*
-3
-123212
-5654345676
-10233211123
-*/

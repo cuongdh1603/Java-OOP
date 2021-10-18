@@ -1,18 +1,20 @@
-/*
+/* TỔNG GIAI THỪA
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Basic;
-
+import java.util.Scanner;
 /**
  *
  * @author Cuong
  */
-public class HELLO {
+public class J01009 {
     public static void main(String[] args) {
-        helloPTIT();
-    }
-    public static void helloPTIT() {
-        System.out.println("Hello PTIT.");
+        Scanner sc = new Scanner(System.in);
+        long s = 0,k = 1;
+        int n = sc.nextInt();
+        for(int i=1;i<=n;i++)
+            s += (k *= i);
+        System.out.println(s);
     }
 }

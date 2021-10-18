@@ -1,35 +1,25 @@
-/* SỐ TAM PHÂN
+/* TỔNG SỐ NGUYÊN LỚN - 1
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Basic;
-
+import java.math.BigInteger;
 import java.util.Scanner;
-
 /**
  *
  * @author Cuong
  */
-public class J01015 {
-    public static boolean check(String s){
-        for(int i=3;i<10;i++){
-            if(s.contains(String.valueOf(i)))
-                return false;
-        }
-        return true;
-    }
+public class J03012 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        //sc.next();
+        int t = Integer.parseInt(sc.nextLine());
         while(t-->0){
-            System.out.println(check(sc.next())?"YES":"NO");
+            String s1 = sc.next();
+            String s2 = sc.next();
+            BigInteger a = new BigInteger(s1);
+            BigInteger b = new BigInteger(s2);
+            BigInteger c = a.add(b);
+            System.out.println(c);
         }
     }
 }
-/*
-3
-1214
-10210221
-22222222
-*/

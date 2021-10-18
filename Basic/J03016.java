@@ -1,35 +1,25 @@
-/* SỐ TAM PHÂN
+/* CHIA HẾT CHO 11
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Basic;
-
+import java.math.BigInteger;
 import java.util.Scanner;
-
 /**
  *
  * @author Cuong
  */
-public class J01015 {
-    public static boolean check(String s){
-        for(int i=3;i<10;i++){
-            if(s.contains(String.valueOf(i)))
-                return false;
-        }
-        return true;
-    }
+public class J03016 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        //sc.next();
+        BigInteger b11 = new BigInteger("11");
         while(t-->0){
-            System.out.println(check(sc.next())?"YES":"NO");
+            String s = sc.next();
+            BigInteger bn = new BigInteger(s);
+            if(bn.mod(b11).compareTo(BigInteger.valueOf(0))==0)
+                System.out.println("1");
+            else System.out.println("0");
         }
     }
 }
-/*
-3
-1214
-10210221
-22222222
-*/
