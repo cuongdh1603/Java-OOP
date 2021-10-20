@@ -18,9 +18,7 @@ public class Bill {
 
     public Bill(int num_id, Customer cm, Product pd, long amount) {
         String str_id = String.valueOf(num_id);
-        while (str_id.length() < 3) {
-            str_id = '0' + str_id;
-        }
+        while (str_id.length() < 3)  str_id = '0' + str_id;
         this.ID = "HD" + str_id;
         this.cm = cm;
         this.pd = pd;
@@ -30,8 +28,7 @@ public class Bill {
 
     @Override
     public String toString() {
-        return this.ID + " " + this.cm.name + " " + this.cm.address + " " + this.pd.name + " "
-                + this.amount + " " + (this.pd.sellPrice * this.amount) + " " + this.profit;
+        return this.ID + " " + this.cm.name + " " + this.cm.address + " " + this.pd.name + " " + this.amount + " " + (this.pd.sellPrice * this.amount) + " " + this.profit;
     }
 }
 
