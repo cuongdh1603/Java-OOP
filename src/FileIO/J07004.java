@@ -7,7 +7,7 @@
     Output
     Ghi ra các số khác nhau và số lần xuất hiện theo thứ tự tăng dần
  */
-package Basic;
+package FileIO;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
