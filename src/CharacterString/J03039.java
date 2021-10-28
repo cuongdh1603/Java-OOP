@@ -10,7 +10,7 @@ Mỗi bộ test viết trên 1 dòng hai số nguyên dương, cách nhau một 
 Output
 Với mỗi test, ghi ra YES hoặc NO theo kết quả kiểm tra.
  */
-package Basic;
+package CharacterString;
 
 import java.math.BigInteger;
 import java.util.Scanner;
