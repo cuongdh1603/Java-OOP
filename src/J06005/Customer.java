@@ -13,14 +13,12 @@ public class Customer {
     String gender;
     String dateOfBirth;
     String address;
-
+    static int i = 1;
     public Customer() {
     }
     
-    public Customer(int num_id, String name, String gender, String dateOfBirth, String address) {
-        String str_id = String.valueOf(num_id);
-        while (str_id.length() < 3) str_id = '0' + str_id;
-        this.ID = "KH" + str_id;
+    public Customer(String name, String gender, String dateOfBirth, String address) {
+        this.ID = String.format("KH%03d", i++);
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.name = name;

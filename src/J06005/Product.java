@@ -13,14 +13,13 @@ public class Product {
     String unit;
     long buyPrice;
     long sellPrice;
+    static int i = 1;
 
     public Product() {
     }
     
-    public Product(int num_id, String name, String unit, long buyPrice, long sellPrice) {
-        String str_id = String.valueOf(num_id);
-        while (str_id.length() < 3) str_id = '0' + str_id;
-        this.ID = "MH" + str_id;
+    public Product(String name, String unit, long buyPrice, long sellPrice) {
+        this.ID = String.format("MH%03d", i++);
         this.name = name;
         this.unit = unit;
         this.buyPrice = buyPrice;

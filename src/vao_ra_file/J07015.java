@@ -33,7 +33,7 @@ public class J07015 {
         int ds[] = new int[10003];
         for (Integer integer : arr)
             ds[integer] ++;
-        for (int i=0;i<ds.length;i++) 
+        for (int i=2;i<ds.length;i++) 
             if(ds[i]>0&&isPrime(i)) System.out.println(i+" "+ds[i]);
     }
 }

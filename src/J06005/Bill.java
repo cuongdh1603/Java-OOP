@@ -13,12 +13,9 @@ public class Bill {
     Customer cm;
     Product pd;
     int amount;
-    public Bill(int num_id, Customer cm, Product pd, int amount) {
-        String str_id = String.valueOf(num_id);
-        while (str_id.length() < 3) {
-            str_id = '0' + str_id;
-        }
-        this.ID = "HD" + str_id;
+    static int i = 1;
+    public Bill(Customer cm, Product pd, int amount) {
+        this.ID = String.format("HD%03d", i++);
         this.cm = cm;
         this.pd = pd;
         this.amount = amount;
